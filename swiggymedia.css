@@ -1,0 +1,205 @@
+@media(max-width:500px){
+    *{
+        overflow-x: hidden ;
+       
+    }
+    .other{
+        display: none;
+    }
+    .india{
+        display: none;
+    }
+
+.offer-img{
+    display: none;
+}
+.help-img{
+    display: none ;
+}
+.help-img{
+    display: none;
+}
+.donout-img{
+    display: none;
+}
+.swiggy-img{
+    height: 80px;
+}
+.container{
+    height: 80px;
+    overflow-y: hidden;
+}
+.crispy{
+    font-size: 20px;
+    margin-left: 20px;
+    overflow-y: hidden;
+}
+.filter{
+    width: 500px;
+    height: 200px;
+}
+.rolls{
+    height: 130px;
+}
+.btn{
+    width: 200px;
+}
+.btnrs{
+    display: none;
+}
+.add{
+    width: 100%;
+    height: 200px;
+    overflow-y: hidden;
+}
+.add-image1{
+    width: 100%;
+    height: 200px;
+    overflow-y: hidden;
+}
+.add-img{
+    overflow-y: hidden;
+}
+.mind{
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+
+}
+.dishes{
+    height: 100px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+margin-left: 20px;
+}
+.dish{
+    width: 50px;
+    
+}
+.explore1-img{
+    display: none;
+}
+.explore-img{
+    width: 300px;
+}
+.hey{
+    height: 50px;
+}
+.explore{
+    width: 100%;
+    height:200px;
+    background-color: aqua;
+    margin-right: 30px;
+    display: none;
+}
+.upto{
+    display: none;
+}
+.fazil{
+    /* background-color: aqua; */
+    height: 100%;
+    overflow-y: hidden;
+}
+.abhi{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.basi{
+    overflow-y: hidden;
+}
+
+
+.shamil{
+     height: 100%;
+     display: flex;
+     overflow-y: hidden;
+     flex-direction: column;
+}
+.abu{
+    overflow-y: hidden;
+}
+.monu{
+    overflow-y: hidden;
+}
+.iam{
+    display: none;
+}
+.last-button{
+    display: grid;
+    grid-template-columns: repeat(2,6fr) ;
+    grid-template-rows: repeat();
+    overflow-y: hidden;
+}
+.second{
+    overflow-y: hidden;
+    height: 400px;
+}
+.bts{
+    width: 180px;
+}
+.btns{
+    width: 180px;
+}
+.across1{
+    font-family: "Basis Grotesque Pro";
+    font-size: 20px;
+    font-weight: 800;
+}
+.promo{
+    display: none;
+}
+.features{
+    display: none;
+}
+.company{
+    display: none;
+}
+.contact{
+    display: none;
+}
+.swiggy-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    height: 200px;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

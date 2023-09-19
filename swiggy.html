@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="swiggy.css">
+    <link rel="stylesheet" href="swiggymedia.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <div class="container">
+                    <div class="swiggy">
+                        <img class="swiggy-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAYFBMVEX////zgCjydQDzfiH+9fHzfB31lVfycQD1n2nzehTyeAv73s7//fz+8uz97ub3sYj6zrb72sj0i0Lzgy/1nGP5ya/0hjb4upf61sH0kE74wKD2q3396uD2p3b84tT2o3GkoRVWAAACnklEQVRoge2Z27KqMAxAe6FgKeKNraII//+XB9QtpRTsmUl65sxkPTm+LJOGNEHGCIIgCIIgCIIgCOL/IGnM4WCabWzv9no/nqTWuZan4+NaxjO33Uloyd9IJXhniijmpsoUd1AiNfjmYjc3P6PPOuzQW577zM/Y8xZVvR+P2YP4wVSLFXNPfkNTX7+oezlW5I3+pu7TjnPmxXHtrD9ylGq/L1a4jdogqI0/49JNRobQZFJvS9GV+71MwbNuvBmXdf+jnMjFAdr98IatOsY2av4dLJn3tIfKct2cA1+pC23F6xZXWPfOm3K/Wz1g3W5BrbnlEVRd+MNeOO8T6AyX+EttIecKtNi2K+5qdEuptMgq2PukXHHfpMie5Kd6s7uBT41rcbMiSbY9SVKg3GHFmhuZwq/m/NyHa4ES+MLzzaWw0LzuLvA70kJfm/0UpbM7tPvbhGohdsDupUL3xV5Dn3rInPjrToDdu4AB+e1OgdXsEDSlDmjwYgtPOvTowP4i6Tn8E94GumWF0NzqsKyj7KKB7SWDfsIGkqBdUOLcbPuQ3ga/lbzwr2TTsDmOmpVKSxfHjfbigZWPtO5JR2Y1EOcd35Ni+tQjvuzxMIlbntHDTprWmLacu8Ue1/tT9YPRi6qcuhFeOUywX6cO05HtFsjvc43VWfXUrYF33xmFNS0PbqvdIFyeDoexs+qLHbeI8HyNO+/ErWA3fj/l58SHyezTW/ImgpvdPnJ5/5x+rI42NnH1+0lVcdS+0U1GyfjAxR2fMtxmOsGZInL4dWCZZuKW54hqxn7srItoh/2iG+sNb05aIBmbCvSu/x3z7usafOUN4JK/6gxjD/lKNaRdR66zN9uzxFi2wzB5jDt7gRv43zIEQRAEQRAEQfwT/gBAZxtOxAQMywAAAABJRU5ErkJggg==" alt="">
+                          <span class="other">Other</span>
+                          <span class="india">Bengaluru,Karnataka,India</span>
+                    </div> 
+                    <div class="navbar">
+                        <div class="search">
+                          <img class="search-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAAAaVBMVEX///8hJikAAAAeIyYVGx/j4+QAAAYNFRkABw0bISQiJyj8/P1JTU0AAAPX19gSGRy0t7hER0nv8PFzdXacnp719vaChYbp6emtra4ADRLLzc6QkpK7vb0wMzR9f4BQU1U3OjxdYWNoa2sl9QWsAAACZUlEQVRoge2Y3ZaqMAyFSQqUUqUgKBZQxPd/yElH1/lx6JyLMaxzkW/u2llrk90mTUwSQRAEQRAEQRAEQRAEQRBi2Gw4j2M3ZcdtdftupzH32uP+cq3oOzbSPV6xMPDEOJyrjYRrdADK4SeaPsFgu0nQI5KuL9u6yvpqGpuctHVz4Bc+5SR06X4p2WkuANyNXbqjiPO2/3PJds6AnpkNnyg+HJOX2zwpBfnIKny4GeVPX9cHBIUDp3KXQ7pb3UBIF8tn+LFU4LPVrZ0BZExrOmW94nWA/NZXPuXWga4ipfKiFGNmlcbs1l8Im5w0eDa7j985SidR1FzKGZZFF9usPMQ3f8qAJUbD6slttmJSYbk/f6fMFjO5HQ9r4HTbUqFqY5s13bCJSzm5GdPE+i7Kdbde3t4B5WweeResU7Fcfwd0lm5Z3zrvw9XmezIaA8Vq0JZeaEazbTIhGFjztNWgbqwt6KIhnb8uhx4JjB4ZO++spJZreX2TRk/tKEDpG84n2ivqcf9K3IyMUGlovCF1Hd8lO5O00ffhedo2Gw01/kU73HQYOYqFK2y6ZXlK/TVerl1dn087pC9RBXUqx7Z4hB0t7T+mb5AkVOpzLFwQ8+bh/lT6EDYu1I4zdYNTQ/OUegx0KZrn2dow6oXVFDu+Sz6cZggDnWva6fjU/VwvdUl+7Ge+qpLYQ1bRTPdaVg7XMOGBM+etZurfTJeQ3crfGcOO0LdFOG0NfJc8yhRSHFS+bPsjiqW/w0KFvFwfwbipU61c/+//ezsU9j3eIbMqU04N2+eVIAiCIAiCIAiCIAiCIPzvfAA67htnKF4m8wAAAABJRU5ErkJggg==" alt="">
+                           <a class="search-link" href="https://www.swiggy.com/search">Search</a>
+                      </div>
+                      <div class="search">
+                           <img class="offer-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCSTP-u3dtZ_PMmhnWG60O1GToPDpY8AIO6g&usqp=CAU" alt="">
+                            <a class="search-link1" href="https://www.swiggy.com/offers-near-me">Offers</a>
+                          </div>
+                          <div class="search">
+                              <img class="donout-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAABR1BMVEX///8AYaAARnT+/v4AYaL7//8ARnMAYZ///f4ARnf+/vz5/////vsAR3UAYaX///3//PYARXgAYKYASXoAQHAASHMAWZgAVpkEYZvz//8AO2v//P8AP3IAMmIAU5IAXZ8AOWUARX0FV44AM2YANWHl7O8AXqgFWpAAVJn//vQAMmR8oLMAPHPZ4eSRrL3T4OkAWo3B0+AAUYgoapXm9vpwoLgAN24AQWePpK3O5+7O4+20x9NvmLQ9fKsVZJlhkbeku8xJfaWGpL4BYYk5fJ2budSpv9FWhKQAWIhli6lHgK5BcZ6byuKWu87j//92pr5zoKqrzty84e9KdJImU25th5h9mqp9ocI+ZIKHtsoAaZcAMFO72uFkgozF3u9cfZQhWHM8aYwAGk1Fdow5WW4kR2Smtb++zNBIY3aYo6otV2cAN1Z6jZ27MQXKAAAY0UlEQVR4nO1d+1va2NbekBu5kJBAQhK53xRFlJqRIhbRmdp6Zmw/B3Xo1HNoz5y2c775/v+fv7UStEFuWm2DHd9n+rSjGNlv1uVda69sCHnEIx7xiEc84hGPeMQjHvGIRzziG4Ipl9cR5bLIBP1egkZ5o13ffdYxOcPIuDBMs/Ns76DbKP8duSk3nu91ChnDCHEh+hJcKAT/YwBDhrl/0C4H/Sa/IcTGwTMzY2Q9IkKTAF83ksbvu38PXsSTox83lznAZDb8xMjZpPHs+DunhWnsGStJTdOAkWkm8hmcGZLp7Erhp+73S0v5oLMydBiOQ/+YZyfuCysabSzvNYJ+818FG3tGUqZND2AEIeRlnvPINGfSmmxymWeHYtAruG809jNZOmReJhngZD4l+BKOM/GFpiknO8+/qwTtMmLOJWGOJxk/Hn83trKxn9TACeYbxlxajK120Iu5F5R3k1kTwgInz02+8yipaHLm2UbQC7o7DjcNje5wJubVO3KCuVmrZHYfuAOV95OyadLypXK/GycICLbmg3agbsG4MxPXYcraAzYV58UT+s4OM84JqJZk54FquEbHkOX75wTFDZhKPejlfQnqK9mbCLNbA6Ut2Epy78H5D3OUoWWU7/duJ9zwutmtB5aVyz9BvnFbRPdNideD8v71oILKRickZ++o5ecjm+kGvdCbY2NT0+4uR+ZDW3kwkbZh0BwNlez9+8010HTyIOjF3gwNQ6ZNjTbn9ozuDJN7IJbSMLLDPtDXpoQOcdkHYSkbLzkt+9UtxIfkwlvKxjJKB+0bcsJlnge96Nkod4CPTudb2gktGwtdJzM/Z+ls9ttyAhXE5iIr2iNQr7RG05VvyEnIlCudxd0Aqie/Qn1zA3DZZ4va0m9k5JAsB8AJJJ8FzchlDgQ9HQwnoeRixtkX2a/SG7gRTLqwiCGlXnHlayCUwM3Q/hE0AePYKFRC3PxZga8EmuOSx0FTMIb9bDBsDDkB71leNO/pJiudb9AxmQaoxEPGftAkjKK8qWlBcoI7avTKYuWe3aQ8fxbrK8Kde9I6VNA8+LCR0UKmFiApJtwRLlRZpLZBsAH2CtkFCrONTNBsuKDl5d+CpuIKW0GGks+gaTO5KIbSMAJSr9dh0tndoMkY4md6McIJ19G4BYkoDaPzLfuvM4ADO2tB0+HiRTZQaeIDiFn65SKMG5SXK1kzaDY84JiY0Q2aEMCBIWsLwok7BbgVNCGEMKbWWZAYGzJxCjcZfBO/kZHHaz9aM013nKiC28bcPXVVOBygdJs0EDfMCYOUKPC5SvDp+IVBY6kxzokcqiTdSXnOvK8YDL8IrgvX04yXHVme7LFa4FFWLHCTRl9pHJve/OXFZqVyf0mJlnH0mKO1zO/Hr14bUzgJfluwbXDcuJ24zWrjfwhp7T5Z0e5vEIWjZc3IPDsRJaUVH/+t3muyewFzsj95hgAoMQstMUYxrdebmXtqNmGTxMjs/SrGYoJEelPGkc2KGazzMIbbNZkQZTluj0hiZEmSXh1vZbLekkI3eApwIjBQyzKdLLxuEUWgKFEgJ0Vj4s5JR0sGO/vXMCbLekg6yR1CIRiJWCf7TzRMRSH886WcaCu/v3lFJPeiSxHFOs0vT8podEcLtmNwwE0siYESbZ8RPE4oSZJIay8DJQBtfqG6g9T15KcTkZE8SgACqdtqYcJMMm0GLNu2JvsCcLLS8N6+IDGMEIPFOK873Bc/2EQbEEbgIlKEGhK9tOQ0eb4wzjFYlBFkcVye3jnZhwA75ESE1QAx0q9PvAdGvwBacpfEKFEUL82EikjMmR2OL4/LAJpLHgbISSOpTVwjR6+cEGH47qUY3F1GWiLnCbCqWfFk8rW8C2YciZIEQbiMJ0yMNIp6WC2M/YDMVYIMKAfJCbcJfF+mOxa8/6ubSgmCFXOKejxLd8wJune4mIqczcqYoEzaFX0cpBooDyBZabLxRpSoUZB+vsnyBXyh74IQyLWfA+Rkf7x1gu5B08lfCDPCicQo9e1mKS/LFbPDTU5WZgcfPUbKMEPhZVDLb3Kyltnv0JuvYtc56W6z0XC8cC370KZmBjiis0yPcxLCJ4I7TszyUQKuE7P0fLN1ljJQZ0zOPlxI1jQN9+G9h5ChooHLy8knuy1ST64cX7cTxWmqPMtGCyOPX3KQeAKsjcvGRE44LvNGkcSliH8B0kmxtkaIU/8xU5F/n8gJLWfxDBQDHAgVGiwUn3MzXzuEVJ1aZcsio5wI5DwVZZEUv6GYskkHGGQ3VugJGgybBE5ErPpvqySSvvrWgWRBnJOflieLmlDhh4uLkze/7T3rPHmSSeJz6/LyscVQAiOQs9qTX69xQlHrts7yrA6W4ueE4yrBjXIdJse1Ok49JF+TJSbm9x2B2UjX/kkilEAtSa9eau4joOAe2aymGYb7QJuR2d8RiYLXFS3nX4evX3QyhlZoQdISYoKyk1ZfkJgojDBNeolwNMyyvKtoPWLQLwMsAw+y4xUHZAw66Vy/oxIZpFZ3GCoCtxy86Al4RtYwCoXOs/29H14/C3HyytaJBepDUNzoCWAsx3mT1PaIK/skphcutqrWNU5OVtUwgsdA+9lY6E5gnBxN4ARHy3fHjDzWKqX+IFQkIggR0k/V4lsvfjg+2XEsCzLESbhgdI4tEKnwfcWLyRCUAeJ7I+MwqG8kpZGunRNJEv2XlaDo4V1SRrMPbQbGyZYWGvMdjpMzretZkwK9tvqJwJoV8ILVVM8BLiQFvxARyn8l7DVHqYI2BTfxPM77h0C6duYNeOES2Ip4quacmODnBMrLuu1ygjEl5ItSwan7zQmchExwZuE6JU5OPRVRhgoCGdRWGwQCp1CtVuFLzNq2XZdiINsFSgEz8gxAYESGqmICf2lJIpAlkePSdl1hRjJ8RHCaYQ/sSKANLhkvaxPqFy7za5UZYUTAGnb7WImhtCXO23xfkdxFM+hMoEZfWmJEgu9CaYScwKsYhlEkTDf13HZXESmIIsKrZk0Hn/JdV2EiUPSwLAYUlo0XXCUQLCeMwY337M3KP0RxyX8zqRi4farp4N0XKbJWK7Z98YZYH1I9IiwtSRB9IwyDqUXyOBUoUXJytXdiBC2CEp/W0m3JRzdwiPlM13kv0LIFKCq8R6kCayuVk+Y4J3LmhFCj8UQi7bS9RuC2Cwyxmrxu+W42cZq1IxIDg4HsUq0qETAPRnI9RAA6QZeULghEXyCqnEv1R4oevKL4no1GPUq87EMHysl6kpPHNBvIzaWl6oidCFY/X3JQrwgxpmvbdeLnBFa6RqoiE5EihGltYEtgyAmaGNOCiIwOI0gQiVLFndgIJ1IMwgwfHcYU/UrmBzZqvrHCje8nZE6kpchIwhTIRSk1AB4gVEDQ5HOOX86RVtH+SCTgxHI+7SZyDUakrqpH+Jv8USu2KDfK4HWOfG4HuUiIKc4H1Y0oaClseNg6CEzcb6yERjnBA8Z+t5ao0RgLujyRvoBchE7RLtq7YBU+Tj4VIb6g7N0ppe2UmvsIeoS5XDSk24ttVwCD0VBYH5SJnxMK6u21Ggh8T7mxerywAJz4Kw2No5NdeM+Cv/oTUK/1GbinAqygn0i3qCW/nRzmthtgJ5RyYqu501y+WBcjjADRVlKECHLxPpF2ICOBBibA6Dkm+ojvApFyLs9eeg8bjrqK1giME4wnPk44OaR1HFAQER8nEYmc28W2AvlEkKBqSQ1AbfjsCLPthgKOpRzb6WOrW8qXzkRQrpBrGNRuxNLDEIEEBjWKpSeaFvap/SoFwszQTlxW+AIe0bUonNAcvfIGTdvPiSA5TR50V4xB2TlIFC+UkT4IOcgVyyDFYrA0iDRMoxkuDhwCIRWcDWIIMBpXm5Yiubq2Xqp9JKN9FDHSyA2T8ZV4k7NBxdj1a/pEhtLeka5xAoZgFyHT4JokJ632mcuaZvjto1y4rAgSaeX4PokxpPUhYfc3QKwgiPU0reb47S4TA96Q3/w7S/KLFApEzTuV93GClhIYJ2WDG21Rc9oPWOeNUgJlGmthZUtFyHltFeJpRPBpOtJr6owiEAcizYkSESWp3M8lmnUH24fiTq+k2idv86dijBFjoHTOU6sNRfKTKoikvq1/5oRHSzGC0ieiMbp9bspGC2uTK0rQ60GvYT0LuRbCQS7fFIEQyUca6Sfew7V2+rY9EDHPCBFrUFTtD2f17nm/lMg3G+QslW4oFOQjStkpgVyp+sOJZMXKOdBr8N8lJzr/JLDtUYMbaQ9z2T1mxKxBt1JMP5VrKYKILtPdBi+iRkHepV7W13qllP3O8eKDJIndpp1I2Ck7kSv1WkTaKYV7DO5jQETqpUqtquD7LRL6XwoLHl+gLQZWA0Il6h89kZ/8GhuNfxAjN9KpIyYGyj0iWKf8W+caJVD/gFFs51PpwWUjCnS84tTfhyFy6mcN8LkY6anpHTAgAaLKBabjETFLSUCaqoY/cxIN2+tBcdIZaW6Fsi8+yy0XuCmK/TUFfUIiJ2lPXYxCPPurlNYHF8wVJZisiOgcFXn9gsSwKLzYzp0R7K7EJPFHKCcl31UYLC3/TAAnn2NK2A6sf7Jn+Ps4IeMCnN6/qSMqsVY6hdkEJan4p2q3FOo6JOK0WhBRqcjlfacYoKFatXZLbAkKShA24mmiBGYEhaBAummUK37iBQhaJd5nJ+FwIrANnt+M0EgTtEXc/sbVpqiIuw3pEykmRiC07LxVE5+wmUSNaC4IyqQqYcvE40skCiRhEcIKA25VapNqlQEBW1tDTkRRcPT8qeWjloFkTDmniRFO9KAoId0KPWIouDmFbi+4uUdYilWdJgtplBIVMIcjm1dXz3E6gIiEUDEUZIQIS9gmcEXrsO3oPLUkQfEkWpFfdTWa1cw3rRhakqDUU3abCNjBh1+D7TgwHmvA5vnmsOhho4lBYJw0kiH/c+d06EnurEzQ8rEgYZgI6E67jspEZIhT0sM8n+45VnvQH3RBeYkX52fnFyK4m/h5H1Wobvz7D4ugbgXte5xWS3UwGRB+pS56ICHOa5uF8gl/AvS+QMXA+eofmjof9kRKVNfjqfPAOFnPjBzAxtGykbLPy4qCvTJYaUR8F1bZs5YIkRI1OmpM+7SXTqRqxXetV4MSpNv0mSNBWhIuw6YQE3eafaia4Asg+LslNb3GEGstpZ5akkJa582crqf/RWK4KwJlEei6s2aO53U2HPfcBqpk+2NgnJDCyN6oydHcctzOnTsESBFATLRLYTWfeztoMLi3q0Itr7OqmsidsqnEaQ8YCRdTub5DJBxmoryUFUEl+x8HI6soxTB6ls4v9BKvphvMBdAI1qAnBkwMG0oKY7V7pRwb9XGC/bZSgBNtz0bqHXf7fDmeTzXPHZDrVMTq13gwahAf77tvclF4s3w4yrP9FnEG22oq1b9wLk5Tdv+kXWa8VELQISTROjp1iOIWi+STnbftPNvkU+976RSvR1U1qpdaEiNKjFN/V2L1OA8xBBzT8x2VV/lmgINKmHh8nOCYRciMs+Ht3AHc/OpFGtzbZSJh51gA/pMttRRGEc9q/AcHTMnps2qxhB6E44yOxYhLUlUQ6x/ApSRFpJbIvxI8G8VWWiKBP+6agr1Gqkxrt5ljea/Jxg7/ICc8/yE4SnBieGx/ByyF51UbqjhsbIR9CfJSO1i4bWH13rZECiKE+M62m6rddxQhZjWPIBGLkHdI44M39QkJq14b0WMumq8ag1VwmrFvhNVwOHUWICflwvjeKMcV4hBL+VxzramOiIZh3ZpuKbFIjHxsYJAE3fJ0cHL43k7pLVGo7jQHVpWxpFiVtPotJrIEKana2Ob161dJ6KWEyk9gHII6mwowxBLycmxunAPFshzVw3GetdFVxsCHTx1XuCnucJogbDCKYg3sfN8SBMXp96yqRKFms/65TpZwR+g8xV83Bx6Dio5tk/HfwLLBVTuI3bEpLNqdP1Gxh45WMvaW4euJ05Z4NeoqRJYi1aokDmqrnxSLEqwBkCIyuJ8h/ncd3AfKJFaPXrtKNIrDOJDHWPX6LwD+2CApIe3kGCfuPJsB7oOpd/w2wkogGZ8NnKrbYgUSoNBZYpTWdqoHTgUB5qBviVjsMQLzCW74RZrXx1wHkzqPxI/7ph4OUMUiysZ1TobGshxFx2bHQ6CHVPoV2IY7ezGsjZxi3s41INJIYvtPR3Cb8wKz/vTM7RdNu84ENPO1QMMJKJTJ864cZ6qsdz8nvvGovcbgJiiRvFbIUuTTeb+p/3VBImAhG386ohdryMUqVgT6LTjR1eAaBR66kw0F3KcQdduAkznho6DYqxKzPuwtYMPEWrMT7ywcQ2ccKJugNmBiMSvHx/nobTgJq/1gKZnmPDjWtuzqy8mrATlaHOy0zj6KQ04EKHrIWW31AuIIaHbxv2UG2wCSU5qQumYiEWSx42Gy8+DDBvRmPDoutjxEm3w+kS6W/nCn8gmJQMHDMBd2sau4FbVA2mUCAZcZ5EG2s9fTzkxOcoE/nn+YobUJT466xJhRSD46O0nMohKHRFo8wxTjlHH/h1Ha2+m2qAA5MUkiH8uKJJ6VbmUjIOv5fC9oSohTqEwZiwZOwH0w+05zoHw+/PYPh3H+d4NA8KCc03zO8Rq6TITs/HXcHpTY+O0oCYdrQT8iCTiqcMtTkk+IBpnPY0tjyhJA1CXe6sXca8g/itVPFXdJDAIJtrTJSbGWTsSjk390GifgOs0FOFSpscJNeaANu/qzAq0OSEDKVvlSnYGisGaDvJfK/yeCI0nlD7DEaFRvTvzRKZxgxfw0aEIQW9kpD8vSONRsuu4zcQksdhJ0VYciwP7xqJlInDpShHL+/cIClzyt8frEemkeJ4FHWMTh+EM8l5xgP2U5DpYwOdCCIYBboRXxfIJl/+NAUCFrtt3vPv/AxqNev+U2nIArBqvrL0F1Zp5HcOk+M2UXD45k/yJKMeZwNRzlc2nMwLdVJmAl8XTwJzi46FZmnKeEHzcV92T+DFaQEzZ9IJLDIs4FQNV3mxLnihI+cA17CWbWQ8OcWxCCl8zkxO0hsM1cwo5G2aYOLvUllOh86VPQZFxiStFzFVZML9DOWSaQFlexL8CGXUpubynR1J9BU3EFppMdnTDwM+L2U5Y995m6TPfrbkBVdVVV3YDM3kaauAyquQWJJoh2kqNnfkAGjf2UGZzcFSh1wnwtyN70GPa1KaeRXEVa020STusd3BXYcOPVxEJok0ts4GH/syLtnH7KnTnRcf8kuF3iidg1Jp/mcMVJaKbMvztA9ekLUOn4IXZmnobj9lMgJX9BMrkpJeHSAhTEo2gnQ6Ymd2ZJFeyn8Cjzv0ChzqMkrAe6+TcFR0ZIC3VmndEw7Kd8lfTDq82gj9uaABHKHrMz67MhwH0Krk65/0Cr87WFUbB+NDIcN/N4uqt+yrQu7ZeDXbScc4nnT2R51pkv7ifDg8z/Cr6TWpTabwx7lVBohu9c66fcE3h8RjLIIZzZELducLIjuM/MbdPbIqqzam4hg4mH9dBsiR/y+inq3H7KLcBG89uB73LNQsOYZyg37afcnBN+e0Hj6yUO5x91P+yn3Jf36PYCirVRPE/SMw8wdPsp8mb8PgjRsc+S6i1YmTMBByt43u+Uo7WumFmOsnfup7B6WFVT/UX9yDc/DlbozlwHwuyDy7pdM+0aEqqaexCU4Klt7hmGsyzlfvopfNz+82FQ4n524pwzDOdtm94IUTbXeyiUYCOfM2eeYuhK2uXp26Y3g30WCXqlt0DDwE/Gk6H+mabh0I7M+Jf2U1wLKy64LrmOjY6GJ2rP/HA8t5/CT59PmQF8binXDXqRt0V5P4nnuM/sHXChL+2n8HxKD/aE5S8DpJ+pR4AO3UcOLQ8fNLktJ7XewlbCM9F4mdWmzXV5gRZythnlp04CTkWitBCTN1+C8t6KjB4yxVi8532wn3LDnOzGHj3M26cP0W8ucbisaXPqn9DN+ymsi0TxQaXgcYCp0LQ863OcPs+nzIsq2F3g1e3+AjeQboj2VmVWo8l1nyh/E5mPo1y2/XTxy+D5YOqbhZma1tv3uYH38InS2cNMN+Mo/5b1PpGGc0+KHQu0IXcMfS4Spd4CzZfcGeWDwormnfiPJ02Pfa6T20+ZMIbOhpErfKiLTxV7Dz+QjKJ8YK7IIFc6phmasFk4vZ+iqhBs1Jp9FuhDfl8JzOH7jDtePOkw0VDIHUMfDbQsBhngJJFuPv1e4sgYNnbNTJaeUCxP7qeAywBHdrPX/h5yzVQw7aPNTHY8nqDcxfmUEZkfDSfsRO/jd2sinyE2DraySeDFdSH8CAAPWdlwH9bmw14BlLBt/az9NyBkiHJ77WcTj/eX3c8I4IZnuy/jI7iqmrBr2/bp2cf1h9NZvCcwG+360VankEl+RqZWzDVPB+cf1/8+9jEB5fX1jXb3eb1e73YPG+t/bzIe8YhHPOIRj3jEIx7xiEc84hHfGP8PAL20JfQmN8IAAAAASUVORK5CYII=" alt="">
+                               <a class="search-link2" href="https://www.swiggy.com/support">Help</a>
+                             </div>
+                             <div class="search">
+                              <img class="help-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT73EzN_QVLcofrYPYGfZl0RQ-rfo4fwRkQQ&usqp=CAU" alt="">
+                               <a class="search-link3" href="https://www.swiggy.com/support">Log In</a>
+                             </div>
+                             <div class="search">
+                              <img class="cart-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiUW-ggYnhLKrlSFj-UuhhyexxiAFRFHNQEg&usqp=CAU" alt="">
+                               <a class="search-link4" href="https://www.swiggy.com/checkout">Cart</a>
+                             </div>
+          
+                          </div>
+                             
+         </div>
+         <div class="rolls">
+            <div class="crispy">
+             <span >Rolls</span>
+             
+             <p class="perfect">Crunchy & crispy rolls that are perfect for all your  moods. </p>
+            
+            </div>
+            <div class="filter">
+             <div class="button">
+                 <button class="btn">Filter</button>
+                 <button class="btn">Sort By</button>
+               <button class="btn">Pure Veg</button>
+                 <button class="btnrs">Less than 30 mins</button>
+                 <button class="btnrs">Less than Rs.300</button>
+                 <button class="btnrs">Rs.300-Rs.600</button>
+             </div>
+            </div>
+
+
+        </div>
+        <div class="whats">
+            <span class="your">Best offers for you</span>
+        </div>
+          <div class="add">
+            <div class="add-img">
+               <img class="add-image1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/d59fb2bd4af3a0850d426a658172f899" alt="">
+            </div>
+
+         </div>
+
+
+
+
+
+
+
+        <div class="whats">
+            <span class="your">Whats on your mind?</span>
+        </div>
+        <div class="mind">
+            <div class="dishes">
+                <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png" alt="">
+                <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png" alt="">
+                <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667626/PC_Creative%20refresh/South_Indian_4.png" alt="">
+                <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png" alt="">
+                 <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png" alt="">
+                 <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png" alt="">
+             <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png" alt="">
+                <img class="dish" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png" alt=""> 
+            </div>
+
+         </div>
+        <div class="hey">
+            <div class="restaurants">
+                <span>318 restaurants to explore</span>
+            </div>
+            </div>
+            
+            <div class="explore">
+                <div class="upto">
+                    <div class="man">
+                    <div class="add">
+                       <img class="explore-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/33101e2fff3a071cbd8b85e73c0d4f45" alt="">
+                      
+                    </div>
+                    <div class="paris">
+                    <div class="gourmet">
+                        <p class="gourmet">Paris Panini-Gourmet...</p>
+                    
+                    </div> 
+                    <div class="gourmet1">
+                       <span class="gourmet1">4.5 2.1mins</span> 
+                    </div>
+                   <div class="gourmet1">
+                    <span class="gourmet1">continental, <br>pastas, <br>bangaluru</span>
+                   </div>
+    
+    
+                </div>
+                </div>
+                <div class=""></div>
+                <div class="upto">
+                    <div class="man">
+                    <div class="add">
+                       <img class="explore-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/49f5596cfcd76e3e1468eeb615311639" alt="">
+                      
+                    </div>
+                    <div class="paris">
+                    <div class="gourmet">
+                        <p class="gourmet">Bharatiya Jalpan</p>
+                    
+                    </div> 
+                    <div class="gourmet1">
+                       <span class="gourmet1">4.2 27mins</span> 
+                    </div>
+                   <div class="gourmet1">
+                    <span class="gourmet1">north indian,sweet,chaat</span>
+                   </div>
+    
+    
+                </div>
+                </div>
+    
+    
+    
+            </div>
+            <div class="upto">
+                <div class="man">
+                <div class="add">
+                   <img class="explore1-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/lx0tpfgsbqygafwh30wh" alt="">
+                  
+                </div>
+                <div class="paris">
+                <div class="gourmet">
+                    <p class="gourmet">Social</p>
+                
+                </div> 
+                <div class="gourmet1">
+                   <span class="gourmet1">4.3 30mins</span> 
+                </div>
+               <div class="gourmet1">
+                <span class="gourmet1">north indian,chineese,fast food</span>
+               </div>
+    
+    
+            </div>
+        </div>
+    </div> 
+     <div class="upto">
+        <div class="man">
+        <div class="add">
+           <img class="explore1-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6a7973d432c533933de71326a0a3dde9" alt="">
+          
+        </div>
+        <div class="paris">
+        <div class="gourmet">
+            <p class="gourmet">Taco bell</p>
+        
+        </div> 
+        <div class="gourmet1">
+           <span class="gourmet1">4.3 46mins</span> 
+        </div>
+       <div class="gourmet1">
+        <span class="gourmet1">Mexican</span>
+       </div>
+
+
+    </div>
+    </div>
+</div> 
+</div>
+</div>
+
+</div>
+   <div class="fazil">
+    <div class="abhi">
+        <div class="basi">
+               <div class="image">
+                <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/0bcdca61f3cd1e9135b98328593d044f" alt="">
+               </div>
+        
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Cafe Amudham</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.5</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">south indian,snacks <br> jayanagar</span>
+           </div>
+
+    </div>
+         <div class="basi">
+               <div class="image">
+                <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qwbqggsxzw86vgk60c9c" alt="">
+               </div>
+        
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Bakingo</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.5</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">Bakery, Desserts, Beverages, Snacks
+                Vasanth Nagar</span>
+           </div>
+
+    </div>
+    <div class="basi">
+        <div class="image">
+         <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf" alt="">
+        </div>
+ 
+ <div class="paris">
+     <div class="gourmet">
+         <p class="gourmet">Burger King</p>
+     </div>
+     <div>
+         <span class=" gourmet1">4.5</span>
+     </div>
+ </div>
+ <div class="gourmet1">
+     <span class="gourmet1">Burger,American,<br>
+        Vijaya Nagar
+        </span>
+    </div>
+
+</div>
+<div class="basi">
+    <div class="image">
+     <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/emlehbuwgsmryxhwzhvq" alt="">
+    </div>
+
+<div class="paris">
+ <div class="gourmet">
+     <p class="gourmet">Lavonne</p>
+ </div>
+ <div>
+     <span class=" gourmet1">4.5</span>
+ </div>
+</div>
+<div class="gourmet1">
+ <span class="gourmet1">
+    Lavonne
+
+Bakery, Desserts
+<br>
+St. Marks Road
+    </span>
+</div>
+
+</div>
+
+
+
+
+
+    </div>
+
+  </div>
+  <div class="shamil">
+    <div class="abu">
+        <div class="monu">
+               <div class="image">
+                <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/o77uezd0iftxb1czbnla" alt="">
+               </div>
+        
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Thebroma</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.6</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">Deasserts,Bakery,Beverages <br> Ashoka nagar</span>
+           </div>
+
+    </div>
+
+</div>
+<div class="abu">
+    <div class="monu">
+           <div class="image">
+            <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/bbpwtyy08vavft4vqb7s" alt="">
+           </div>
+    
+    <div class="paris">
+        <div class="gourmet">
+            <p class="gourmet">Jose Mess</p>
+        </div>
+        <div>
+            <span class=" gourmet1">4.3</span>
+        </div>
+    </div>
+    <div class="gourmet1">
+        <span class="gourmet1">Indian<br> Tavarekere</span>
+       </div>
+
+</div>
+
+</div>
+<div class="abu">
+    <div class="monu">
+           <div class="image">
+            <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/bmwn4n4bn6n1tcpc8x2h" alt="">
+           </div>
+    
+    <div class="paris">
+        <div class="gourmet">
+            <p class="gourmet">Kannur Food Point</p>
+        </div>
+        <div>
+            <span class=" gourmet1">3.9</span>
+        </div>
+    </div>
+    <div class="gourmet1">
+        <span class="gourmet1">Kerala,Chinese<br> Tavarekere</span>
+       </div>
+
+</div>
+
+</div>
+<div class="abu">
+    <div class="monu">
+           <div class="image">
+            <img class="image-1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/475688804b4b6086854d60b3a68440e7" alt="">
+           </div>
+    
+    <div class="paris">
+        <div class="gourmet">
+            <p class="gourmet">Restaurant Chef Pillai</p>
+        </div>
+        <div>
+            <span class=" gourmet1">4.7</span>
+        </div>
+    </div>
+    <div class="gourmet1">
+        <span class="gourmet1">South Indian,Seafood<br>Central bangalore</span>
+       </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="iam">
+    <div class="who">
+        <div class="image">
+             <img class="image1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qltgnkyywuo5gmnpqzbm" alt="">
+        </div>
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Hotel Empire</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.7</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">South Indian,Seafood<br>Central bangalore</span>
+           </div>
+        
+    </div>
+    
+    <div class="who">
+        <div class="image">
+             <img class="image1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/8cb220fa3997a3b928d2ffb6c098acaf" alt="">
+        </div>
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">The Belgian Waffle Co.</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.6</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">Waffle,Desserts,Ice Cream<br>Central bangalore</span>
+           </div>
+        
+    </div>
+    <div class="who">
+        <div class="image">
+             <img class="image1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/cd832b6167eb9f88aeb1ccdebf38d942" alt="">
+        </div>
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Truffles</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.5</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">American,Desserts<br>Central bangalore</span>
+           </div>
+        
+    </div>
+    <div class="who">
+        <div class="image">
+             <img class="image1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6f0945b8b18d9f4241dd1cd9a70e23d7" alt="">
+        </div>
+        <div class="paris">
+            <div class="gourmet">
+                <p class="gourmet">Magnolia Bakery</p>
+            </div>
+            <div>
+                <span class=" gourmet1">4.5</span>
+            </div>
+        </div>
+        <div class="gourmet1">
+            <span class="gourmet1">American,Desserts,Bakery<br>Central bangalore</span>
+           </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hori">
+    <hr class="hr"> 
+</div>
+<div class="Eat">
+            
+    <span class="across">Best Places to Eat Across Cities</span>
+
+
+</div>
+
+<div class="second">
+    <div class="last-button">
+      <button class="bts">Best Restaurants in Bangalore</button>
+      <button class="bts">Best Restaurants im Gurgaon</button>
+      <button class="bts">Best Restaurants in Hyderabad</button>
+      <button class="bts">Best Restaurants in Delhi</button>
+      <button class="bts">Best Restaurants im Mumbai</button>
+      <button class="bts">Best Restaurants in Pune</button>
+      <button class="bts">Best Restaurants in Kolkata</button>
+      <button class="bts">Best Restaurants in Chennai</button>
+      <button class="bts">Best Restaurants in Ahmedabad</button>
+      <button class="bts">Best Restaurants in Chandigarh</button>
+      <button class="bts">Best Restaurants in Jaipur</button>
+      <button  class="bts">Show More</button>
+     
+
+
+    </div>
+
+
+
+
+
+</div>
+<div class="Eat1">
+    <span class="across1">Explores every Restaurants Near Me</span>
+  </div>
+  <div class="her">
+      <div class="third">
+         <button class="btns">Explores Restaurants Near Me</button>
+         <button class="btns">Explores Top Rated Restaurants Near Me</button>
+      </div>
+  </div>
+  <div class="promo">
+
+    <div class="alpha">
+   <span class="better">For better experience,download <br> the Swiggy app now</span>
+   <div>
+   <img class="app" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png" alt="">
+   <img class="app1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png" alt="">
+</div>
+    </div>
+   </div>
+
+
+
+
+
+   <div class="footer">
+    <div class="footer-div">
+        <div class="swiggy-footer">
+            <img class="swiggy-img-footer" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRieT2F5M5zRMm-1tHy6T8JxMF3RvJ6psr4S0BYBX_sdZadiPl6" alt="">
+             <span class="dec">© 2023 Bundl <br> Technologies Pvt. Ltd</span>
+        </div>
+        <div class="features">
+                   <h1 class="company-font">Company</h1>
+                   <br>
+                   <a class="dec" href="https://www.swiggy.com/about">About</a>
+                   <br>
+                   <a class="dec" href="https://www.swiggy.com/careers">Careers</a>
+                   <br>
+                   <a class="dec" href="https://www.swiggy.com/team">Team</a>
+                   <br>
+                   <a class="dec" href="https://www.swiggy.com/swiggy-super">Swiggy One</a><br>
+                   <a class="dec" href="https://www.swiggy.com/swiggy-instamart">Swiggy Instamart</a><br>
+                   <a class="dec" href="https://www.swiggy.com/swiggy-genie">Swiggy Genie</a>
+        </div>          <div class="contact">
+            <h1 class="company-font">Contact Us</h1>
+            <br>
+            <a class="dec" href="https://www.swiggy.com/support">Help & Support</a><br>
+            <a class="dec" href="https://partner-with-us.swiggy.com/onboard#/swiggy">Partner With Us</a><br>
+            <a class="dec" href="https://ride.swiggy.com/">Ride With Us</a><br><br>
+            <h1 class="company-font">Legal</h1><br>
+            <a class="dec" href="https://www.swiggy.com/terms-and-conditions">Terms & Conditions</a><br>
+            <a class="dec" href="https://www.swiggy.com/cookie-policy">Cookie Policy</a><br>
+            <a class="dec" href="https://www.swiggy.com/privacy-policy">Privacy Policy</a><br>
+
+           </div> 
+           <div class="contact">
+            <h1 class="company-font">We Deliver to:</h1>
+            <br>
+            <a class="dec" href="https://www.swiggy.com/city/bangalore">Bangalore</a><br>
+            <a class="dec" href="https://www.swiggy.com/city/gurgaon">Gurgaon</a><br>
+            <a class="dec" href="https://www.swiggy.com/city/hyderabad">Hyderabad</a><br>
+            
+            <a class="dec" href="https://www.swiggy.com/city/delhi">Delhi</a><br>
+            <a class="dec" href="https://www.swiggy.com/city/mumbai">Mumbai</a><br>
+            <a class="dec" href="https://www.swiggy.com/city/pune">Pune</a><br>
+            <button class="cities">588 cities</button>
+
+           </div>
+             
+                    
+
+
+    </div>
+
+   </div>
+           
+</body>
+</html>
